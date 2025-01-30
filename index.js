@@ -9,6 +9,7 @@ app.use(express.json());
 // api to add data to db
 app.post("/",(req,res)=>{
     try {
+        
         studModel(req.body).save();
         res.send("Data added successfully!");
     } catch (error) {
